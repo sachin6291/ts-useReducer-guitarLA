@@ -1,9 +1,24 @@
-import { useMemo } from "react"
+import { CartItem, Guitar } from "../types/types"
+type HeaderProps ={
+    cart: CartItem[]
+    removeFromCart:(id:Guitar['id']) => void
+    increaseQuantity:(id:Guitar['id']) => void
+    reduceQuantity:(id:Guitar['id']) => void
+    emptyCart:()=>void
+    isEmpty:boolean
+    cartTotal:number
+}
 
-const Header = ({cart, removeFromCart, increaseQuantity, reduceQuantity, emptyCart, isEmpty, cartTotal}) => {
-   
-    
-  
+const Header = ({
+    cart, 
+    removeFromCart, 
+    increaseQuantity, 
+    reduceQuantity, 
+    emptyCart, 
+    isEmpty, 
+    cartTotal
+}: HeaderProps) => {
+     
     return (
     <header className="py-5 header">
         <div className="container-xl">
