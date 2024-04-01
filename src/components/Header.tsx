@@ -1,5 +1,5 @@
 import { useMemo, Dispatch } from "react"
-import type{ CartItem, Guitar } from "../types/types"
+import type{ CartItem} from "../types/types"
 import type{ CartActions } from "../reducers/cartReducer"
 type HeaderProps ={
     cart: CartItem[]
